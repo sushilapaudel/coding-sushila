@@ -1,149 +1,104 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sushila Paudel | Researcher</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sushila Paudel | Research Portfolio</title>
 
-  <style>
-    :root{
-      --bg:#ffffff;              /* white background */
-      --card:#ffffff;
-      --text:#111827;            /* black text */
-      --muted:#4b5563;
-      --brand:#38bdf8;           /* sky blue */
-      --brand-dark:#0284c7;
-      --border:#e5e7eb;
-      --radius:18px;
-      --max:1080px;
-    }
+<style>
+:root{
+  --brand:#38bdf8;
+  --brand-dark:#0284c7;
+  --border:#e5e7eb;
+  --text:#111827;
+  --muted:#4b5563;
+  --radius:18px;
+  --max:1080px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  color:var(--text);
+  line-height:1.65;
+}
+.container{max-width:var(--max); margin:auto; padding:0 18px;}
+a{text-decoration:none;color:inherit}
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      background: var(--bg);
-      color: var(--text);
-      line-height:1.6;
-    }
+/* HEADER */
+header{
+  background:var(--brand);
+  color:#fff;
+  position:sticky;
+  top:0;
+}
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 0;
+  flex-wrap:wrap;
+}
+nav a{
+  color:#fff;
+  padding:6px 10px;
+  border-radius:8px;
+  font-weight:500;
+}
+nav a:hover{background:rgba(255,255,255,.2)}
 
-    a{text-decoration:none; color:inherit}
-    .container{max-width:var(--max); margin:auto; padding:0 18px;}
+/* LAYOUT */
+section{padding:28px 0}
+.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:22px;
+}
+h2,h3{color:var(--brand-dark);margin-bottom:10px}
+.date{color:var(--muted);font-size:.9em}
 
-    /* ===== TOP BAR ===== */
-    header{
-      background: var(--brand);
-      color:#ffffff;
-      position:sticky;
-      top:0;
-      z-index:10;
-    }
+/* HERO */
+.hero{padding:50px 0}
+.tag{
+  display:inline-block;
+  background:#e0f2fe;
+  color:var(--brand-dark);
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:14px;
+  margin-bottom:10px;
+}
+.profile{text-align:center}
+.profile img{
+  width:160px;height:160px;border-radius:50%;
+  border:4px solid var(--brand);
+  object-fit:cover;margin-bottom:14px;
+}
+.info div{
+  padding:8px 0;border-bottom:1px solid var(--border);
+  font-size:14px;
+}
+.info div:last-child{border-bottom:none}
 
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:14px 0;
-      flex-wrap:wrap;
-      gap:12px;
-    }
+/* LISTS */
+ul{padding-left:20px}
+li{margin-bottom:8px}
 
-    nav a{
-      color:#ffffff;
-      font-weight:500;
-      padding:6px 10px;
-      border-radius:8px;
-    }
+/* FOOTER */
+footer{
+  border-top:1px solid var(--border);
+  text-align:center;
+  padding:20px 0;
+  color:var(--muted);
+  font-size:14px;
+}
 
-    nav a:hover{
-      background: rgba(255,255,255,0.2);
-    }
-
-    .btn{
-      padding:8px 14px;
-      border-radius:10px;
-      background:#ffffff;
-      color:var(--brand-dark);
-      font-weight:600;
-    }
-
-    /* ===== HERO ===== */
-    .hero{padding:50px 0;}
-    .grid{
-      display:grid;
-      grid-template-columns:1.2fr 0.8fr;
-      gap:24px;
-    }
-
-    .card{
-      background: var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:22px;
-    }
-
-    h1{margin-top:0}
-    h2,h3{color:var(--brand-dark)}
-
-    .tag{
-      display:inline-block;
-      background:#e0f2fe;
-      color:var(--brand-dark);
-      padding:6px 12px;
-      border-radius:999px;
-      font-size:14px;
-      margin-bottom:10px;
-    }
-
-    .cta{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap}
-
-    .btn.primary{
-      background: var(--brand);
-      color:white;
-    }
-
-    /* ===== PROFILE IMAGE ===== */
-    .profile{
-      text-align:center;
-    }
-
-    .profile img{
-      width:160px;
-      height:160px;
-      border-radius:50%;
-      object-fit:cover;
-      border:4px solid var(--brand);
-      margin-bottom:14px;
-    }
-
-    .info div{
-      padding:8px 0;
-      border-bottom:1px solid var(--border);
-      font-size:14px;
-    }
-
-    section{padding:28px 0;}
-
-    .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
-    .grid-3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px;}
-
-    .pub{
-      border-bottom:1px solid var(--border);
-      padding:12px 0;
-    }
-
-    footer{
-      border-top:1px solid var(--border);
-      padding:20px 0;
-      text-align:center;
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    @media(max-width:900px){
-      .grid,.grid-2,.grid-3{grid-template-columns:1fr}
-    }
-  </style>
+@media(max-width:900px){
+  .grid,.grid-2{grid-template-columns:1fr}
+}
+</style>
 </head>
 
 <body>
@@ -153,97 +108,191 @@
     <strong>Sushila Paudel</strong>
     <nav>
       <a href="#about">About</a>
-      <a href="#research">Research</a>
+      <a href="#education">Education</a>
       <a href="#experience">Experience</a>
+      <a href="#awards">Awards</a>
       <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
-      <a class="btn" href="#contact">Collaborate</a>
+      <a href="#other">Other</a>
     </nav>
   </div>
 </header>
 
 <main class="container">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="grid">
+<!-- HERO -->
+<section class="hero">
+  <div class="grid">
+    <div class="card">
+      <span class="tag">Researcher • Public Health • Disaster Management</span>
+      <h1>Sushila Paudel</h1>
+      <p>
+        PhD in Disaster Management (Public Health) with experience in critical care,
+        disaster preparedness, migrant health, and health systems research in Nepal and Japan.
+      </p>
+    </div>
 
-      <div class="card">
-        <span class="tag">Researcher • Public Health • Disaster Management</span>
-        <h1>Sushila Paudel</h1>
-        <p>
-          PhD in Disaster Management (Public Health) and research coordinator working across
-          critical care, disaster preparedness, and health systems research in Nepal and Japan.
-        </p>
-
-        <div class="cta">
-          <a class="btn primary" href="#publications">Selected Publications</a>
-          <a class="btn" href="#experience">Experience</a>
-        </div>
+    <aside class="card profile">
+      <img src="images/sushilaportrait.jpg" alt="Sushila Paudel">
+      <div class="info">
+        <div><strong>Email:</strong> sushila.epinurse@gmail.com</div>
+        <div><strong>ORCID:</strong> 0000-0002-4824-8625</div>
+        <div><strong>Location:</strong> Kathmandu, Nepal</div>
       </div>
+    </aside>
+  </div>
+</section>
 
-      <aside class="card profile">
-        <img src="images/sushilaportrait.jpg" alt="Sushila Paudel">
-        <div class="info">
-          <div><strong>Email:</strong> sushila.epinurse@gmail.com</div>
-          <div><strong>ORCID:</strong> 0000-0002-4824-8625</div>
-          <div><strong>Location:</strong> Kathmandu, Nepal</div>
-        </div>
-      </aside>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About</h2>
+  <p>
+    Researcher and educator specializing in disaster nursing, public health,
+    and clinical research coordination, with strong experience in mixed-methods research
+    and international collaborations.
+  </p>
+</section>
 
+<!-- EDUCATION -->
+<section id="education">
+  <h2>Education</h2>
+  <div class="grid-2">
+    <div class="card">
+      <strong>PhD in Disaster Management (Health Care)</strong><br>
+      University of Kochi, Japan<br>
+      <span class="date">2017 – 2022</span>
     </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About</h2>
-    <p>
-      Researcher and educator with expertise in disaster nursing, public health,
-      and clinical research coordination. Experienced in mixed-methods research,
-      registry implementation, and capacity building.
-    </p>
-  </section>
-
-  <!-- RESEARCH -->
-  <section id="research">
-    <h2>Research Areas</h2>
-    <div class="grid-3">
-      <div class="card"><h3>Disaster Nursing</h3><p>Preparedness and resilience.</p></div>
-      <div class="card"><h3>Critical Care</h3><p>ICU outcomes & registries.</p></div>
-      <div class="card"><h3>Migrant Health</h3><p>Healthcare access in crises.</p></div>
+    <div class="card">
+      <strong>B.Sc. Nursing</strong><br>
+      Tribhuvan University, Institute of Medicine, MNC, Nepal<br>
+      <span class="date">2014</span>
     </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+<h2>Professional Experience</h2>
+<div class="grid-2">
+  <div class="card"><strong>Research Coordinator</strong><br>Nepal Intensive Care Research Foundation, Nepal<br><span class="date">2023–Present</span></div>
+  <div class="card"><strong>Adjunct Lecturer</strong><br>ICMS, Nepal<br><span class="date">2024–Present</span></div>
+  <div class="card"><strong>Research Consultant</strong><br>DPNet Nepal<br><span class="date">2024</span></div>
+  <div class="card"><strong>Researcher</strong><br>NDRRMA, Ministry of Home Affairs,Nepal<br><span class="date">2024</span></div>
+  <div class="card"><strong>Research Assistant</strong><br>University of Kochi, Japan<br><span class="date">2019–2021</span></div>
+  <div class="card"><strong>Project Coordinator</strong><br>EpiNurse Disaster Project<br><span class="date">2017–2019</span></div>
+</div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards">
+<h2>Awards & Honors</h2>
+<ul>
+  <li>Certificate of Honor – Hon. Prime Minister of Nepal (2024)</li>
+  <li>Interspace UTokyo IIS Award, Japan (2022)</li>
+  <li>Outstanding Abstract Award – EWC Conference, Hawaii, USA (2021)</li>
+  <li>Certificate of Honor – NRNA Japan (2021)</li>
+  <li>IRDR Young Scientist Fellow (2019)</li>
+</ul>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+<h2>Publications</h2>
+<h3>Journal Articles</h3>
+    <ul class="pub-list">
+      <li>Neupane et al. (2024). <strong>Empiric gram-negative antibiotics usage among critically ill patients across 13 ICUs of Nepal: A retrospective cohort study</strong>. <em>Wellcome Open Research</em>, 9, 573. https://doi.org/10.12688/wellcomeopenres.22948.1</li>
+      <li>Aryal, D., Bhattarai, S., <strong>Paudel, S.</strong>, et al. (2024). <strong>Comparison of clinical characteristics and outcomes between COVID-19 survivors and non-survivors: a retrospective observational study</strong>. <em>Wellcome Open Research</em>, 9, 204. https://doi.org/10.12688/wellcomeopenres.20919.1</li>
+      <li>Aryal, D., Luitel, S., <strong>Paudel, S.</strong>, et al. (2023). <strong>Critical Care Services in Bagmati Province of Nepal: A Cross Sectional Survey</strong>. <em>Wellcome Open Research</em>, 8, 575. https://doi.org/10.12688/wellcomeopenres.19932.1</li>
+      <li><strong>Paudel, S.</strong> & Kanbara, S. (2023). <strong>Development of disaster nursing in Nepal: Opportunities and challenges for advanced practice</strong>. <em>International Nursing Review</em>. https://doi.org/10.1111/inr.12880</li>
+      <li><strong>Paudel, S.</strong> & Kanbara, S. (2023). <strong>Enhancing healthcare access during disasters and emergencies: Recommendations from Nepali migrants in Japan</strong>. <em>Dialogues in Health</em>, 2, 100136. https://doi.org/10.1016/j.dialog.2023.100136</li>
+      <li><strong>Paudel, S.</strong>, Bhandari, A. K. C., Gilmour, S., Lee, H. J., & Kanbara, S. (2023). <strong>Barriers and Facilitating Factors to Healthcare Accessibility among Nepalese Migrants during COVID-19 Crisis in Japan: An Exploratory Sequential Mixed Methods Study</strong>. <em>BMC Public Health</em>, 23, 1226. https://doi.org/10.1186/s12889-023-16107-7</li>
+      <li>Chandra, Y. A., Kawamura, Y., <strong>Paudel, S.</strong>, & Nishigawa, M. (2020). <strong>Value of mutual assistance for disaster risk reduction in Japan, Indonesia, and Nepal: A preliminary study</strong>. <em>Health Emergency and Disaster Nursing</em>, 7(1), 9–16. https://doi.org/10.24298/hedn.2018-0010</li>
+      <li><strong>Paudel, S.</strong> (2017). <strong>Role of Nepali nurses in disaster risk reduction: A need for capacity building</strong>. <em>UNMGCY Youth Science-Policy Interface Publication</em> (Special edition), 48–52.</li>
+    </ul>
+
+    <h3>Systematic Review</h3>
+    <ul class="pub-list">
+      <li><strong>Paudel, S.</strong>, Kumar, P., Dasgupta, R., Johnson, B. A., Avtar, R., Shaw, R., et al. (2021). <strong>Nexus between Water Security Framework and Public Health: A Comprehensive Scientific Review</strong>. <em>Water</em>, 13(10), 1365. https://doi.org/10.3390/w13101365</li>
+    </ul>
+
+    <h3>Book Chapters</h3>
+    <ul class="pub-list">
+      <li>Dwinantoaji, H., Widyasamratri, H., <strong>Paudel, S.</strong>, Fushimi, Y., Moriguchi, I., & Kanbara, S. (2022). <strong>Primary Health Care (PHC), Universal Health Coverage (UHC), Disaster Risk Reduction (DRR), and Role of Local Caregiver</strong>. In S. Kanbara, S. Miyagawa, & H. Miyazaki (Eds.), <em>Disaster Nursing, Primary Health Care and Communication in Uncertainty</em>. Springer. https://doi.org/10.1007/978-3-030-98297-3_13</li>
+      <li>Mashino, S. et al. (2022). <strong>Nursing Experience in Disaster and Health Emergencies</strong>. In S. Kanbara, S. Miyagawa, & H. Miyazaki (Eds.), <em>Disaster Nursing, Primary Health Care and Communication in Uncertainty</em>. Springer. https://doi.org/10.1007/978-3-030-98297-3_7</li>
+    </ul>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="grid-2">
-      <div class="card"><strong>Research Coordinator – NICRF</strong><br/>2023–Present</div>
-      <div class="card"><strong>Adjunct Lecturer – ICMS</strong><br/>2024–Present</div>
-    </div>
-  </section>
+</ul>
+</section>
 
-  <!-- PUBLICATIONS -->
-  <section id="publications">
-    <h2>Selected Publications</h2>
-    <div class="pub"><strong>Development of disaster nursing in Nepal</strong> – International Nursing Review (2023)</div>
-    <div class="pub"><strong>Healthcare accessibility among Nepalese migrants</strong> – BMC Public Health (2023)</div>
-  </section>
+<!-- OTHER -->
+<section id="other">
+<h2>Other</h2>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:sushila.epinurse@gmail.com">sushila.epinurse@gmail.com</a></p>
+<h3>Skills</h3>
+<p>
+Microsoft Office | Data Analysis (SPSS, NVivo, MAXQDA) |
+Academic Writing | Project Management
+</p>
+
+<h3>Grants</h3>
+<ul>
+  <li>University of Kochi Graduate School Research Grant (2022–2023)</li>
+  <li>Rotary Yoneyama Scholarship, Japan (2020–2022)</li>
+  <li>Program for Leading Graduate School (DNGL), Japan (2017–2018)</li>
+</ul>
+
+<h3>Professional Membership</h3>
+<ul>
+  <li>Nursing Association of Nepal (2015–Present)</li>
+  <li>Japanese Society of Public Health (2022–2023)</li>
+  <li>Japan Society of Disaster Nursing (2017–2020)</li>
+</ul>
+
+<h3>Conference Presentations</h3>
+<h4>Oral Presentations</h4>
+<ul class="pub-list">
+<ul>
+  <li><strong>Paudel, S.</strong> (December, 2024). <strong>Situation Analysis and Lessons Learned from the Jajarkot Earthquake in Nepal: A Field Visit Report</strong>. World Society of Disaster Nursing 2025, Kobe, Japan.</li>
+  <li><strong>Paudel, S.</strong> (September, 2023). <strong>Migrants’ health during Covid-19 crisis in Japan</strong>. 5th Global Nepali Health Conference, Tokyo, Japan.</li>
+  <li><strong>Paudel, S.</strong> (February, 2021). <strong>Developing a Conceptual Framework for School Nursing Activities in Nepal</strong>. 20th East-West Center International Graduate Student Conference, Hawaii, USA.</li>
+  <li><strong>Paudel, S.</strong>, Kanbara, S., Regina, M., Estuar, E., Miyagawa, S., Lee, H., & Rogers, N. (2019). <strong>Participatory Monitoring of Health Security by Nurses for Disaster Risk Reduction</strong>. World Bosai Forum, Sendai, Miyagi, Japan.</li>
+  <li><strong>Paudel, S.</strong> (March, 2019). <strong>Japan Flood Disaster 2018: An Experience Report on Non-Japanese Nursing Volunteering</strong>. 32nd Japan Association of International Health (JAIH), Fukuoka, Japan.</li>
+  <li><strong>Paudel, S.</strong> (October, 2018). <strong>Nepal Flood Disaster 2017: A Report on Nursing Activities</strong>. World Society of Disaster Nursing 2018, Bremen, Korea.</li>
+  <li><strong>Paudel, S.</strong> (July, 2018). <strong>Guest Speaker on behalf of Kanbara Sakiko: Spatial Information Technology for Nursing</strong>. International Conference of Health Management, Bandung, Indonesia.</li>
+  <li><strong>Paudel, S.</strong> (November, 2017). <strong>EpiNurse Nepal: Participatory Monitoring of Health Security in Disaster</strong>. World Bosai Forum, Sendai, Japan.</li>
+  <li><strong>Paudel, S.</strong> (October, 2017). <strong>Cultural Diversity Management in Disaster Nursing Global Leader Program</strong>. Program for Leading Graduate Schools Forum, Japan.</li>
+</ul>
+
+    
+<h4>Poster Presentations</h4>
+<ul class="pub-list">
+  <li>Yamamoto, Y., <strong>Paudel, S.</strong>, & Motoyuki, S. (October, 2019). <strong>Survey of Foreigners during Heavy Rainfall 2017, Japan</strong>. 78th Annual Meeting of the Japanese Society of Public Health (JSPH78), Kochi, Japan.</li>
+  <li>Chandra, Y. A., Kawamura, Y., <strong>Paudel, S.</strong>, & Nishigawa, M. (January, 2018). <strong>Comparative Investigation on the value of mutual assistance for disaster risk reduction in Japan, Indonesia and Nepal</strong>. 21st EAFONS, Seoul, Korea.</li>
+</ul>
+
+<h4>Webinar</h4>
+<ul class="pub-list">
+  <li><strong>Paudel, S.</strong> (February, 2025). <strong>Integration of Health Technology in Nursing on Megathrust Disaster Preparedness</strong>. Ottentic Learning Centre and Nursing Department, Poltekkes Kemenkes Bandung, Indonesia.</li>
+</ul>
+</section>
+
+
+<h3>Contact</h3>
+<p>Email: <a href="mailto:sushila.epinurse@gmail.com">sushila.epinurse@gmail.com</a></p>
   </section>
+  
+</ul>
+</ul>
+</section>
 
 </main>
 
 <footer>
-  © <span id="year"></span> Sushila Paudel • Research Portfolio
+© <span id="year"></span> Sushila Paudel
 </footer>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
