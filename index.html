@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sushila Paudel | Researcher</title>
+
+  <style>
+    :root{
+      --bg:#ffffff;              /* white background */
+      --card:#ffffff;
+      --text:#111827;            /* black text */
+      --muted:#4b5563;
+      --brand:#38bdf8;           /* sky blue */
+      --brand-dark:#0284c7;
+      --border:#e5e7eb;
+      --radius:18px;
+      --max:1080px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: var(--bg);
+      color: var(--text);
+      line-height:1.6;
+    }
+
+    a{text-decoration:none; color:inherit}
+    .container{max-width:var(--max); margin:auto; padding:0 18px;}
+
+    /* ===== TOP BAR ===== */
+    header{
+      background: var(--brand);
+      color:#ffffff;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:14px 0;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    nav a{
+      color:#ffffff;
+      font-weight:500;
+      padding:6px 10px;
+      border-radius:8px;
+    }
+
+    nav a:hover{
+      background: rgba(255,255,255,0.2);
+    }
+
+    .btn{
+      padding:8px 14px;
+      border-radius:10px;
+      background:#ffffff;
+      color:var(--brand-dark);
+      font-weight:600;
+    }
+
+    /* ===== HERO ===== */
+    .hero{padding:50px 0;}
+    .grid{
+      display:grid;
+      grid-template-columns:1.2fr 0.8fr;
+      gap:24px;
+    }
+
+    .card{
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:22px;
+    }
+
+    h1{margin-top:0}
+    h2,h3{color:var(--brand-dark)}
+
+    .tag{
+      display:inline-block;
+      background:#e0f2fe;
+      color:var(--brand-dark);
+      padding:6px 12px;
+      border-radius:999px;
+      font-size:14px;
+      margin-bottom:10px;
+    }
+
+    .cta{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap}
+
+    .btn.primary{
+      background: var(--brand);
+      color:white;
+    }
+
+    /* ===== PROFILE IMAGE ===== */
+    .profile{
+      text-align:center;
+    }
+
+    .profile img{
+      width:160px;
+      height:160px;
+      border-radius:50%;
+      object-fit:cover;
+      border:4px solid var(--brand);
+      margin-bottom:14px;
+    }
+
+    .info div{
+      padding:8px 0;
+      border-bottom:1px solid var(--border);
+      font-size:14px;
+    }
+
+    section{padding:28px 0;}
+
+    .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+    .grid-3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px;}
+
+    .pub{
+      border-bottom:1px solid var(--border);
+      padding:12px 0;
+    }
+
+    footer{
+      border-top:1px solid var(--border);
+      padding:20px 0;
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media(max-width:900px){
+      .grid,.grid-2,.grid-3{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <strong>Sushila Paudel</strong>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="#contact">Collaborate</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="grid">
+
+      <div class="card">
+        <span class="tag">Researcher • Public Health • Disaster Management</span>
+        <h1>Sushila Paudel</h1>
+        <p>
+          PhD in Disaster Management (Public Health) and research coordinator working across
+          critical care, disaster preparedness, and health systems research in Nepal and Japan.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="#publications">Selected Publications</a>
+          <a class="btn" href="#experience">Experience</a>
+        </div>
+      </div>
+
+      <aside class="card profile">
+        <img src="images/sushilaportrait.jpg" alt="Sushila Paudel">
+        <div class="info">
+          <div><strong>Email:</strong> sushila.epinurse@gmail.com</div>
+          <div><strong>ORCID:</strong> 0000-0002-4824-8625</div>
+          <div><strong>Location:</strong> Kathmandu, Nepal</div>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      Researcher and educator with expertise in disaster nursing, public health,
+      and clinical research coordination. Experienced in mixed-methods research,
+      registry implementation, and capacity building.
+    </p>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <h2>Research Areas</h2>
+    <div class="grid-3">
+      <div class="card"><h3>Disaster Nursing</h3><p>Preparedness and resilience.</p></div>
+      <div class="card"><h3>Critical Care</h3><p>ICU outcomes & registries.</p></div>
+      <div class="card"><h3>Migrant Health</h3><p>Healthcare access in crises.</p></div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="grid-2">
+      <div class="card"><strong>Research Coordinator – NICRF</strong><br/>2023–Present</div>
+      <div class="card"><strong>Adjunct Lecturer – ICMS</strong><br/>2024–Present</div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2>Selected Publications</h2>
+    <div class="pub"><strong>Development of disaster nursing in Nepal</strong> – International Nursing Review (2023)</div>
+    <div class="pub"><strong>Healthcare accessibility among Nepalese migrants</strong> – BMC Public Health (2023)</div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sushila.epinurse@gmail.com">sushila.epinurse@gmail.com</a></p>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Sushila Paudel • Research Portfolio
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
